@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MKAnalogClockView">
+        <attr name="clockType" format="enum">
+            <enum name="analog" value="0"/>
+            <enum name="digital" value="1"/>
+        </attr>
+
+        <!--move hands always based on miliseconds-->
+        <attr name="alwaysMovingHands" format="boolean"/>
+        <!--analog clock circle-->
+        <attr name="circleEnabled" format="boolean"/>
+        <attr name="circleColor" format="color"/>
+        <attr name="circleStroke" format="integer"/>
+        <attr name="circlePaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+
+        <!--center-->
+        <attr name="centerColor" format="color"/>
+        <attr name="centerSize" format="integer"/>
+        <attr name="centerPaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+
+        <!-- numerals-->
+        <attr name="numeralsEnabled" format="boolean"/>
+        <attr name="numeralsFontSize" format="dimension"/>
+        <attr name="numeralsColor" format="color"/>
+        <attr name="numeralsSpacingToCircle" format="dimension"/>
+
+        <!--Seconds line decorations-->
+        <attr name="secLinesDecorationEnabled" format="boolean"/>
+        <attr name="secLinesDecorationHeight" format="dimension"/>
+        <attr name="secLineDecorationColor" format="color"/>
+        <attr name="secLineDecorationPaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+        <attr name="secLineStroke" format="integer"/>
+
+        <!-- Hour Hand-->
+        <attr name="handHourPadding" format="dimension"/>
+        <attr name="handHourColor" format="color"/>
+        <attr name="handHourPaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+        <attr name="handHourStroke" format="integer"/>
+
+        <!-- Minutes Hand-->
+        <attr name="handMinutesPadding" format="dimension"/>
+        <attr name="handMinutesColor" format="color"/>
+        <attr name="handMinutesPaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+        <attr name="handMinutesStroke" format="integer"/>
+
+        <!-- Seconds Hand-->
+        <attr name="secondsEnabled" format="boolean"/>
+        <attr name="handSecondsPadding" format="dimension"/>
+        <attr name="handSecondsColor" format="color"/>
+        <attr name="handSecondsPaintStyle" format="enum">
+            <enum name="FILL" value="0"/>
+            <enum name="STROKE" value="1"/>
+            <enum name="FILL_AND_STROKE" value="2"/>
+        </attr>
+        <attr name="handSecondsStroke" format="integer"/>
+
+    </declare-styleable>
+</resources>
