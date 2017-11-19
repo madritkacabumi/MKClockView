@@ -30,12 +30,15 @@ public class MKAnalogClockView extends View {
     private int circleStroke = 5;
     private Paint.Style circleStyle = Paint.Style.STROKE;
     private int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
+
     // 2 - center
+    private boolean centerEnabled = true;
     private int centerColor = Color.BLACK;
     private int centerSize = 10;
     private Paint.Style centerStyle = Paint.Style.FILL;
 
     // 3 numerals
+    private boolean numeralsEnabled = true;
     private int fontSize = 13;
     private int numeralsColor = Color.GRAY;
     private int numeralSpacingToCircle = 30;
@@ -121,6 +124,7 @@ public class MKAnalogClockView extends View {
         this.alwaysMovingHands = array.getBoolean(R.styleable.MKAnalogClockView_alwaysMovingHands, false);
         // 1 circle
         this.circleEnabled = array.getBoolean(R.styleable.MKAnalogClockView_circleEnabled, true);
+        this.centerEnabled = array.getBoolean(R.styleable.MKAnalogClockView_centerEnabled, true);
         this.circleColor = array.getColor(R.styleable.MKAnalogClockView_circleColor, Color.BLACK);
         this.circleStroke = array.getInteger(R.styleable.MKAnalogClockView_circleStroke, 3);
         int circleStyle = array.getInt(R.styleable.MKAnalogClockView_circlePaintStyle, 1);
@@ -145,6 +149,7 @@ public class MKAnalogClockView extends View {
         }
 
         //3 numerals
+        this.numeralsEnabled = array.getBoolean(R.styleable.MKAnalogClockView_numeralsEnabled, true);
         this.fontSize = array.getDimensionPixelSize(R.styleable.MKAnalogClockView_numeralsFontSize, 13);
         this.numeralsColor = array.getColor(R.styleable.MKAnalogClockView_numeralsColor, Color.GRAY);
         this.numeralSpacingToCircle = array.getDimensionPixelSize(R.styleable.MKAnalogClockView_numeralsSpacingToCircle, 20);
@@ -226,16 +231,26 @@ public class MKAnalogClockView extends View {
         if (!isInit){
             initClock();
         }
+
         canvas.drawColor(Color.WHITE);
         if (circleEnabled) {
             drawCircle(canvas);
         }
-        drawCenter(canvas);
-        drawNumeral(canvas);
+
+        if (centerEnabled) {
+            drawCenter(canvas);
+        }
+
+        if (numeralsEnabled) {
+            drawNumeral(canvas);
+        }
+
         drawHands(canvas);
+
         if (secLinesEnabled) {
             drawSecondsLines(canvas);
         }
+
         invalidate();
     }
 

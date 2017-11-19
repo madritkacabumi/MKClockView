@@ -6,11 +6,33 @@
     android:layout_height="match_parent"
     tools:context="com.legency.madrit.clockviewexample.MainActivity">
 
-    <com.legency.madrit.mkanalogclockview.MKAnalogClockView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Hello World!" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.legency.madrit.testinglibraries.MainActivity">
+
+        <com.legency.madrit.mkanalogclockview.MKAnalogClockView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+
+            app:alwaysMovingHands="true"
+            app:circleEnabled="true"
+            app:secondsEnabled="true"
+            app:circleColor="#ff6d00"
+            app:handSecondsColor="#ff0000"
+            app:handMinutesColor="#0325ff"
+            app:handHourColor="#01c701"
+            android:id="@+id/mAnalogClock"
+            app:numeralsEnabled="false"
+            app:secLinesDecorationEnabled="true"
+            app:secLineDecorationColor="#ff0000"
+            />
+
+    </RelativeLayout>
+
 
 </RelativeLayout>

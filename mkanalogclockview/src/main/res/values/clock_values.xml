@@ -19,6 +19,7 @@
         </attr>
 
         <!--center-->
+        <attr name="centerEnabled" format="boolean"/>
         <attr name="centerColor" format="color"/>
         <attr name="centerSize" format="integer"/>
         <attr name="centerPaintStyle" format="enum">
